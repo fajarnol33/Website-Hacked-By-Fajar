@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hacked by Fajar</title>
+
+  <!-- Font Montserrat (modern, sans-serif, bold) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" />
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      overflow: hidden;
+      font-family: "Courier New", monospace;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    /* BACKGROUND: file kode binary.jpeg dengan opacity 0.3 */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("kode binary.jpeg") center center / cover no-repeat;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    /* CONTAINER UTAMA */
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 5rem auto;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    /* JUDUL: HACKED BY FAJAR (Montserrat Bold) */
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: #ff0000;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 5px red;
+    }
+    /* TEKS IRONY: PAKAI COURIER */
+    .irony-text {
+      font-family: "Courier New", monospace;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 2rem auto;
+      max-width: 600px;
+    }
+    /* AUDIO PLAYER */
+    .audio-container {
+      margin-top: 2rem;
+    }
+    audio {
+      width: 300px;
+      max-width: 90%;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Judul -->
+    <div class="title">HACKED BY FAJAR</div>
+
+    <!-- Teks Irony (Tetap Courier) -->
+    <div class="irony-text">
+      The irony is that the law in this country works like a blade—sharp only for the weak.<br>
+      When the poor steal out of desperation, they are swiftly met with harsh punishments.<br>
+      Meanwhile, corrupt officials who embezzle billions from public funds enjoy privileges—<br>
+      light sentences, luxury prison facilities, and in some cases, complete freedom.<br>
+      If justice can be bought, then where does the morality of this nation stand?
+    </div>
+
+    <!-- Audio Player -->
+    <div class="audio-container">
+      <audio controls>
+        <source src="lagu-koruptor.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    // Blokir klik kanan kecuali pada elemen audio
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName.toLowerCase() === 'audio' || e.target.closest('audio')) {
+        return;
+      }
+      e.preventDefault();
+    }, false);
+
+    // Blokir shortcut seperti F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, Ctrl+Shift+J
+    document.onkeydown = function(e) {
+      if (e.keyCode === 123) return false;  // F12
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 73) return false;  // Ctrl+Shift+I
+      if (e.ctrlKey && e.keyCode === 85) return false;  // Ctrl+U
+      if (e.ctrlKey && e.keyCode === 83) return false;  // Ctrl+S
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 74) return false;  // Ctrl+Shift+J
+    };
+
+    // Blokir copy event
+    document.addEventListener('copy', function(e) {
+      e.preventDefault();
+    }, false);
+  </script>
+</body>
+</html>
